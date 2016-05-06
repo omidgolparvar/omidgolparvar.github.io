@@ -78,7 +78,7 @@ function SearchArticles() {
       if (_string == "" && event.keyCode == 32) event.preventDefault();
     })
     .on('keyup', function(event) {
-      var _string = $(this).val().trim().replace(/ي/g,'ی').replace(/ك/g,'ک');
+      var _string = $(this).val().trim().toLowerCase().replace(/ي/g,'ی').replace(/ك/g,'ک');
       var _all_articles = $('.single-article');
       
       $.each(_all_articles, function (index, element) {
