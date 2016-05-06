@@ -1,0 +1,329 @@
+@font-face {
+  font-family: "IranSans";
+  src: url("../font/IRANSansWeb.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IranSans";
+  src: url("../font/IRANSansWeb_Medium.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "IranSans";
+  src: url("../font/IRANSansWeb_Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "IranSans";
+  src: url("../font/IRANSansWeb_Light.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "BMitra";
+  src: url("../font/BMitra_Bold.ttf");
+}
+
+
+/*
+* {
+  -webkit-transition: 0.3s ease-in-out 0s;
+  -moz-transition: 0.3s ease-in-out 0s;
+  transition: 0.3s ease-in-out 0s;
+}
+*/
+button,textarea,input {
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.space {
+  height: 20px;
+  /*background-color: red;*/
+}
+
+body {
+  direction: rtl;
+  margin: 0;
+  padding: 0px;
+  font-family: 'IranSans';
+  margin: 0px;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Header */
+header {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 280px;
+  background-color: darkslateblue;
+  height: 100vh;
+  overflow-y: scroll;
+}
+header #main-logo {
+  text-align: center;
+  margin: 20px 0px;
+}
+header #main-logo img {
+  width: 200px;
+  height: auto;
+}
+header #menu {
+  margin: 20px 0px;
+}
+header #menu .btn {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  color: #7F77AE;
+  font-size: large;
+  display: block;
+  /*font-family: 'IranSans';*/
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0px 20px;
+  -webkit-transition: 0.3s ease-in-out 0s;
+  -moz-transition: 0.3s ease-in-out 0s;
+  transition: 0.3s ease-in-out 0s;
+}
+header #menu .btn.active,
+header #menu .btn:hover {
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+}
+header #menu .btn i {
+  height: inherit;
+  line-height: inherit;
+  display: inline-block;
+  width: 48px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    position: initial;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Content Holder */
+#content-holder {
+  /*background-color: rgba(0,0,0,0.05);*/
+  /*min-height: 1000px;*/
+  margin-right: 280px;
+  opacity: 1;
+}
+@media only screen and (max-width: 600px) {
+  #content-holder {
+    margin-right: 0;
+  }
+}
+
+/* Panels */
+div[id^="panel"] {
+  padding: 40px;
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  div[id^="panel"] {
+    padding: 20px;
+  }
+}
+div[id^="panel"].show { display: block; }
+div[id^="panel"].hide { display: none; }
+
+/* Panel Home */
+#panel-home {
+  
+}
+#panel-home p.title {
+  font-size: 40pt;
+  font-family: 'BMitra';
+  line-height: 72px;
+}
+#panel-home p.info {
+  font-weight: bold;
+  font-size: large;
+}
+@media only screen and (max-width: 600px) {
+  #panel-home p.title {
+    font-size: 30pt;
+    line-height: 55px;
+  }
+  #panel-home p.info {
+    font-size: medium;
+  }
+}
+
+/* Panel About */
+#panel-about img {
+  display: block;
+  width: 160px;
+  height: auto;
+  margin: auto;
+}
+#panel-about p {
+  font-size: large;
+}
+
+/* Panel People */
+#panel-people .members-name {
+  font-weight: bold;
+  color: darkblue;
+}
+#panel-people .members-title {
+
+}
+#panel-people .members-title:before {
+  content: '.......... ';
+  color: lightgray;
+}
+
+/* Panel Articles */
+#panel-articles {
+  
+}
+#panel-articles #search-form {
+  width: 100%;
+  position: relative;
+}
+#panel-articles #search-form input {
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 6px;
+  width: inherit;
+  height: 60px;
+  padding: 0px 60px 0px 10px;
+  /*border: 1px solid lightgray;*/
+  border: none;
+  font-size: x-large;
+  font-family: 'IranSans';
+  box-sizing: border-box;
+  -webkit-transition: 0.3s ease-in-out 0s;
+  -moz-transition: 0.3s ease-in-out 0s;
+  transition: 0.3s ease-in-out 0s;
+}
+@media only screen and (max-width: 600px) {
+  #panel-articles #search-form input {
+    font-size: medium;
+  }
+}
+#panel-articles #search-form label {
+  color: darkslateblue;
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 64px;
+  text-align: center;
+  font-size: x-large;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#panel-articles #all-articles {
+  padding: 10px 0px;
+}
+#panel-articles #all-articles .single-article {
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  position: relative;
+}
+#panel-articles #all-articles .single-article.hide {
+  display: none;
+}
+#panel-articles #all-articles .single-article div {
+  box-sizing: border-box;
+}
+#panel-articles #all-articles .single-article .article-code {
+  display: inline-block;
+  height: 30px;
+  line-height: 33px;
+  border-radius: 4px;
+  color: darkblue;
+  background-color: rgba(0, 0, 139, 0.04);
+  padding: 0px 15px;
+  font-size: small;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+#panel-articles #all-articles .single-article .article-type {
+  display: inline-block;
+  height: 30px;
+  line-height: 33px;
+  border-radius: 4px;
+  padding: 0px 15px;
+  font-size: small;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+#panel-articles #all-articles .single-article .article-type.article-type-poster {
+  background-color: rgba(0, 139, 139, 0.04);
+  color: darkcyan;
+}
+#panel-articles #all-articles .single-article .article-type.article-type-oral {
+  background-color: rgba(139, 0, 139, 0.04);
+  color: darkmagenta;
+}
+#panel-articles #all-articles .single-article .article-field {
+  display: inline-block;
+  height: 30px;
+  line-height: 33px;
+  border-radius: 4px;
+  background-color: rgba(139,0,0,0.04);
+  padding: 0px 15px;
+  color: darkred;
+  font-size: small;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+#panel-articles #all-articles .single-article .article-title {
+  padding: 5px 0px;
+  font-size: x-large;
+}
+#panel-articles #all-articles .single-article .article-authors {
+  padding: 0px 0px;
+  color: #666;
+}
+#panel-articles #all-articles .single-article .article-abstract {
+  padding: 20px 0px 0px 0px;
+  font-size: small;
+  font-weight: lighter;
+}
+#panel-articles #all-articles .single-article .article-abstract:before {
+  content: 'چکیده';
+  border-radius: 4px;
+  padding: 0px 5px;
+  background-color: rgba(0,0,0,0.04);
+  margin-left: 5px;
+}
+#panel-articles #all-articles .single-article .article-keywords {
+  padding: 10px 0px 0px 0px;
+  font-size: small;
+  font-weight: lighter;
+}
+#panel-articles #all-articles .single-article .article-keywords:before {
+  content: 'کلمات کلیدی';
+  border-radius: 4px;
+  padding: 0px 5px;
+  background-color: rgba(0,0,0,0.04);
+  margin-left: 5px;
+}
+#panel-articles #all-articles .single-article .article-action {
+  
+} 
+
+
+#panel-support {
+  text-align: center;
+}
+#panel-support img {
+  width: 200px;
+  height: auto;
+  margin: 20px 10px;
+}
