@@ -135,6 +135,7 @@ div[id^="panel"] {
   div[id^="panel"] {
     padding: 20px;
     width: 100% !important;
+    box-sizing: border-box;
   }
 }
 div[id^="panel"].show { display: block; }
@@ -248,7 +249,7 @@ div[id^="panel"].hide { display: none; }
   line-height: 33px;
   border-radius: 4px;
   color: darkblue;
-  background-color: rgba(0, 0, 139, 0.04);
+  background-color: rgba(0, 0, 139, 0.1);
   padding: 0px 15px;
   font-size: small;
   font-weight: lighter;
@@ -265,11 +266,11 @@ div[id^="panel"].hide { display: none; }
   margin-bottom: 5px;
 }
 #panel-articles #all-articles .single-article .article-type.article-type-poster {
-  background-color: rgba(0, 139, 139, 0.04);
+  background-color: rgba(0, 139, 139, 0.1);
   color: darkcyan;
 }
 #panel-articles #all-articles .single-article .article-type.article-type-oral {
-  background-color: rgba(139, 0, 139, 0.04);
+  background-color: rgba(139, 0, 139, 0.1);
   color: darkmagenta;
 }
 #panel-articles #all-articles .single-article .article-field {
@@ -277,7 +278,7 @@ div[id^="panel"].hide { display: none; }
   height: 30px;
   line-height: 33px;
   border-radius: 4px;
-  background-color: rgba(139,0,0,0.04);
+  background-color: rgba(139,0,0,0.1);
   padding: 0px 15px;
   color: darkred;
   font-size: small;
