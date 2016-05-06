@@ -60,8 +60,16 @@ function GetArticles() {
   
   $('#single-article-template').tmpl(AllArticles).appendTo('#all-articles');
   
+  Remove_nbsp();
+  
 }
 
+function Remove_nbsp() {
+  var _all_article_abstracts = $('.article-abstract');
+  $.each(_all_article_abstracts, function (index, element) {
+    $(this).html( $(this).html().replace(/&nbsp;/gi,''));
+  });
+}
 
 function SearchArticles() {
   $('#search-form-input')
